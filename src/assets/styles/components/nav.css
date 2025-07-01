@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    position: fixed;
+    right: 0; left: 0;
+    padding: 12px 60px;
+    align-items: center;
+    background-color: #ffffff9d;
+    backdrop-filter: blur(30px);
+    justify-content: space-between;
+
+    .links {
+        display: flex;
+        li {
+            list-style: none;
+            a {
+                margin: 0 32px;
+                color: #000;
+            }
+        }
+    }
+
+    .menu {
+        img {
+            cursor: pointer;
+            width: 40px;
+        }
+    }
+}
+
+#logo {
+    width: 100px;
+}

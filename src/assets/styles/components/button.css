@@ -1,0 +1,32 @@
+button {
+    --primary-color: #fff;
+    --secondary-color: #43e403;
+    cursor: pointer;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    width: fit-content;
+    padding: 12px 36px;
+    border-radius: 25px;
+    border: 2px solid #000;
+    background-color: var(--primary-color);
+    font-family: "Montserrat", serif;
+    transition: 0.3s ease-in-out;
+}
+
+
+button:hover {
+    opacity: 80%;
+    border-radius: 0;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    border: 2px solid #02af02;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
