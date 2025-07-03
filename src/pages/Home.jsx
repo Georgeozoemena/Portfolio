@@ -1,5 +1,4 @@
 import React from 'react'
-import { HeadlineText, Avatar, LogoWhite } from '../assets'
 import Button, { DownloadButton } from '../components/Button'
 import '../assets/styles/global.css'
 import About from './AboutMe'
@@ -28,7 +27,7 @@ export default function Home(){
                         <p>Using my skills, I help brings ideas into interfaces, and brands into experiences</p>
                     </div>
                     <Card />
-                </div>
+                </div>                              
                 <Projects />
                 <About />
                 <div className="get-in-touch">

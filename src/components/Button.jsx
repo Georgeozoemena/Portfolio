@@ -5,9 +5,11 @@ import { Resume } from '../assets'
 export default function Button({type, disabled, onClick, children, variant}) {
     
     return(
-        <button type={type} disabled={disabled} onClick={onClick} className={variant}>
-            {children}
-        </button>
+        <a href="">
+            <button type={type} disabled={disabled} onClick={onClick} className={variant}>
+                {children}
+            </button>
+        </a>
     )
 }
 

@@ -66,6 +66,7 @@ em {
 }
 
 .body-section {
+  position: relative;
   color: #fff;
   padding: 45px 60px;
   background-color: #000;
@@ -93,13 +94,13 @@ em {
   .get-in-touch {
     display: flex;
     gap: 24px;
-    margin: 100px 0 60px;
+    padding: 36px 0;
     text-align: center;
     align-items: center;
+    border-radius: 25px;
+    margin: 100px 0 60px;
     flex-direction: column;
-    /* width: fit-content; */
-  
-    /* background-color: #272727; */
+    background: url('../images/pattern.jpg');
 
     .logo > img {
       width: 100px;
@@ -161,7 +162,7 @@ em {
 
     .project-img {
       img {
-        width: 1000px;
+        width: 950px;
       }
     }
     
@@ -215,10 +216,10 @@ em {
 
 .not-found {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 24px;
   margin-top: 10%;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -386,83 +387,6 @@ em {
   gap: 10px;
 }
 
-/* Large  Screens */
-@media (min-width: 993px) and (max-width: 1200px) {
-  .home {
-    img {
-      width: 780px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-  .avatar {
-    img {
-      width: 320px;
-      top: 55%; right: 78%;
-    }
-  }
-  .project {
-    padding: 0 0 16px 0;
-    text-align: center;
-    font-size: large;
-    
-    .headline {
-      margin: 26px 0;
-    }
-    
-    .projects {
-      margin: 0 60px;
-      
-      .project-name {
-        font-size: x-large;
-      }
-
-      .project-img {
-        img {
-          width: 800px;
-        }
-      }
-    }
-  }
-  .about-me {
-    margin: 0 70px;
-
-    .bio-content {
-      .bio-img {
-        img {
-          right: -10%; bottom: -10%;
-          width: 550px;
-        }
-      }
-    }
-
-    h2 {
-      margin: 12px 0 36px;
-    }
-
-    .my-bio {
-      .my-bio-headline {
-        img {
-          width: 380px;
-        }
-      }
-
-      .my-bio-description {
-        width: 50%;
-        p {
-          font-size: 18px;
-        }
-      }
-
-    }
-  }
-  .connect-with-me {
-    h2 {
-      margin: 12px 0 20px;
-    }
-  }
-
 .contact-me {
   margin: 20px 80px 0;
 
@@ -519,14 +443,12 @@ em {
   gap: 10px;
 }
 
-}
-
 
 .footer {
   display: flex;
   gap: 48px;
   list-style: none;
-  margin-top: 150px;
+  margin-top: 100px;
   flex-direction: column;
   
   .footer-content, .links {
@@ -583,5 +505,85 @@ em {
   hr {
     border: 2px solid #43e403;
     border-radius: 25px;
+  }
+}
+
+/* Large  Screens */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .home {
+    img {
+      width: 780px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .avatar {
+    img {
+      width: 320px;
+      top: 55%; right: 78%;
+    }
+  }
+  .project {
+    padding: 0 0 16px 0;
+    text-align: center;
+    font-size: large;
+    
+    .headline {
+      margin: 26px 0;
+    }
+    
+    .projects {
+      margin: 0 60px;
+      
+      .project-name {
+        font-size: x-large;
+      }
+
+      .project-img {
+        img {
+          width: 800px;
+        }
+      }
+    }
+  }
+  .about-me {
+    .bio-content {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      text-align: left;
+
+      .bio-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    h2 {
+      margin: 12px 0 36px;
+    }
+
+    .my-bio {
+      .my-bio-headline {
+        img {
+          width: 380px;
+        }
+      }
+
+      .my-bio-description {
+        width: 50%;
+        p {
+          font-size: 18px;
+        }
+      }
+
+    }
+  }
+  .connect-with-me {
+    h2 {
+      margin: 12px 0 20px;
+    }
   }
 }

@@ -2,10 +2,11 @@ import React from "react";
 import { Huttspot, Propfit, Choppins, Fidelity } from "../../assets";
 import '../../assets/styles/global.css'
 import Button from "../../components/Button";
+import Slider from "../../components/SliderEffect";
 
 
 export default function Projects(){
-    const Projects = [
+    const projects = [
         {
         name: "Propfit",
         img: Propfit,
@@ -18,16 +19,16 @@ export default function Projects(){
         description: "Huttspot is a modern rental and apartment management app designed to simplify property listing, tenant communication, rent tracking, and maintenance requests for students.",
         stack: ["React", "ExpressJS"],
     },
-    // {
-    //     name: "Choppins",
-    //     img: Choppins,
-    //     description: "Choppins",
-    // },
-    // {
-    //     name: "Fidelity Mobile",
-    //     img: Fidelity,
-    //     description: "Fidelity Mobile",
-    // }
+    {
+        name: "Choppins",
+        img: Choppins,
+        description: "Choppins",
+    },
+    {
+        name: "Fidelity Mobile",
+        img: Fidelity,
+        description: "Fidelity Mobile",
+    }
     ]
 
     function createProject(project){
@@ -59,7 +60,9 @@ export default function Projects(){
                 <p>Using my skills, I help brings ideas into interfaces, and brands into experiences</p>
             </div>
             <div className="projects">
-                {Projects.map(createProject)}
+                <Slider items={projects} interval={5000} renderItem={project => (
+                    createProject(project)
+                )} />
             </div>
         </div>
     )
