@@ -12,7 +12,7 @@ export default function Home(){
             <div className="hero">
                 <div className="hero-text">
                     <h1>Turning Ideas into <em>Interfaces</em>, and Brands into <em>Experiences</em></h1>
-                    <h3>Frontend Developer, UI/UX Designer, Brand Identity Specialist</h3>
+                    <h3>Fullstack Developer, UI/UX Designer, Brand Identity Specialist</h3>
                     <p>With 2+ years of creating clean code, intuitive interfaces, and memorable brands</p>
                 </div>
                 <div className="hero-btn-section">
