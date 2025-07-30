@@ -18,5 +18,5 @@ export {default as Choppins} from "./images/Naija Chops.png"
 //--------------------------------------ABOUT ME------------------------------
 export {default as AboutMe} from "./images/Who is George.svg"
 export {default as Twitter} from "./images/X.svg"
-export {default as Github} from "./images/Github.svg"
+export {default as Github} from "./images/GitHub.svg"
 export {default as Instagram} from "./images/Instagram.svg"
