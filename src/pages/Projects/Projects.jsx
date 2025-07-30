@@ -60,9 +60,10 @@ export default function Projects(){
                 <p>Using my skills, I help brings ideas into interfaces, and brands into experiences</p>
             </div>
             <div className="projects">
-                <Slider items={projects} interval={5000} renderItem={project => (
+                <h1>Under Construction</h1>
+                {/* <Slider items={projects} interval={5000} renderItem={project => (
                     createProject(project)
-                )} />
+                )} /> */}
             </div>
         </div>
     )

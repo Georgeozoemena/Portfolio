@@ -28,3 +28,24 @@
     border-radius: 8px;
     background-color: #03da39;
 }
+
+@media (min-width: 769px) and (max-width: 992px),
+(min-width: 481px) and (max-width: 992px) {
+    .card-container {
+        display: block;
+    }
+    .card {
+        max-width: 100%;
+
+        .text-container {
+            display: grid;
+            gap: 6px;
+
+            h3 {
+                font-size: 1.5rem;
+            } p {
+                font-size: 1rem;
+            }
+        }
+    }
+}

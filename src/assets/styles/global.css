@@ -587,3 +587,301 @@ em {
     }
   }
 }
+
+/* Medium Screens */
+@media (min-width: 769px) and (max-width: 992px) {
+  .hero {
+    padding: 30px 32px 55px;
+
+    .hero-text {
+      gap: 12px;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 24px;
+      }
+    
+      h3 {
+        font-size: 1.45rem;
+      }
+    
+      p {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  .body-section {
+    .skill-set-container {
+      .text-container {
+        h1 {
+          font-size: 2.61rem;
+        }
+      }
+    }
+
+    .project {
+      .text-container {
+        h2 {
+          width: 100%;
+          font-size: 2.61rem;
+        }    
+      }
+    }
+
+    
+    .about-me {
+      margin-top: 12px;
+      .bio-content {
+        align-items: center;
+        gap: 32px;
+
+        .my-bio{
+          width: 100%;
+          
+          .my-bio-headline {
+            img {
+              width: 240px;
+            }
+          }
+          .my-bio-description {
+            width: 100%;
+            p {
+              font-size: 18px;
+            }
+          }
+          .my-socials {
+            .socials {
+              img {
+                width: 35px;
+              }
+            }
+          }
+        }
+        .bio-img {
+          width: 80%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .get-in-touch {
+      padding: 32px 0;
+      border-radius: 12px;
+      
+      .text-container{
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    gap: 48px;
+    
+    .footer-content {
+      .section-1 {
+        gap: 24px;
+
+        .logo {
+          img {
+            width: 170px;
+          }
+        }
+
+        li {
+          font-size: 1.1rem;
+        }
+
+        .socials {
+          gap: 12px;
+
+          .social {
+            width: fit-content;
+            padding: 6px 8px 0px;
+          }
+        }
+      }
+
+      .links {
+        h2 {
+          font-size: 0.85rem;
+          margin-bottom: 24px;
+        }
+
+        .quick-links, .best-cases {
+          li {
+            gap: 32px;
+          }
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* Small Screens */
+@media (min-width: 481px) and (max-width: 992px) {
+  .hero {
+    padding: 30px 16px 55px;
+
+    .hero-text {
+      gap: 16px;
+
+      h1 {
+        font-size: 2.9rem;
+        margin-bottom: 12px;
+      }
+    
+      h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    
+      p {
+        font-size: 1.02rem;
+      }
+    }
+  }
+
+  .body-section {
+    padding-left: 36px; padding-right: 36px;
+
+    .skill-set-container, .project {
+      .text-container {
+        display: grid;
+        gap: 10px;
+
+        h1 {
+          font-size: 2.8rem;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    .project {
+      .text-container {
+        h2 {
+          width: 100%;
+          font-size: 2.8rem;
+        }    
+      }
+    }
+
+    
+    .about-me {
+      margin-top: 12px;
+      .bio-content {
+        display: grid;
+        place-items: center;
+        gap: 32px;
+
+        .my-bio{
+          width: 100%;
+          
+          .my-bio-headline {
+            img {
+              width: 240px;
+            }
+          }
+          .my-bio-description {
+            width: 100%;
+            p {
+              font-size: 18px;
+            }
+          }
+          .my-socials {
+            .socials {
+              img {
+                width: 35px;
+              }
+            }
+          }
+        }
+        .bio-img {
+          width: 80%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .get-in-touch {
+      padding: 32px 24px;
+      border-radius: 12px;
+      
+      .text-container{
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    
+    .footer-content {
+      display: grid;
+      gap: 48px;
+      
+      .section-1 {
+        padding: 0;
+        gap: 24px;
+        
+        .logo {
+          display: grid;
+          place-items: left;
+  
+          img {
+            width: 80%;
+          }
+        }
+  
+        li {
+          font-size: 1.1rem;
+        }
+        
+        .socials {
+          gap: 12px;
+          width: 100%;
+  
+          .social {
+            width: fit-content;
+            padding: 6px 8px 0px;
+          }
+        }
+      }
+  
+      .links {
+        text-align: left;
+        h2 {
+          font-size: 0.85rem;
+          margin-bottom: 24px;
+        }
+        
+        .quick-links, .best-cases {
+          li {
+            gap: 32px;
+          }
+          
+          a {
+            text-align: right;
+            font-size: 1.2rem;
+          }
+        }
+        
+      }
+    }
+  }
+}

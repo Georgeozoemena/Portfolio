@@ -30,3 +30,15 @@
 #logo {
     width: 100px;
 }
+
+
+@media (min-width: 769px) and (max-width: 992px),
+(min-width: 481px) and (max-width: 992px) {
+    .nav-container {
+        padding: 12px 30px;
+        
+        .links {
+            display: none;
+        }
+    }
+}
