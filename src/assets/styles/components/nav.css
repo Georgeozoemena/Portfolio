@@ -42,3 +42,17 @@
         }
     }
 }
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .nav-container {
+        padding: 12px 30px;
+        
+        .links {
+            display: none;
+        }
+        
+        button {
+            padding: 4px 30px;
+        }
+    }
+}

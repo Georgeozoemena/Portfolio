@@ -30,7 +30,8 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px),
-(min-width: 481px) and (max-width: 992px) {
+(min-width: 481px) and (max-width: 992px), 
+(min-width: 0px) and (max-width: 480px) {
     .card-container {
         display: block;
     }
@@ -49,3 +50,4 @@
         }
     }
 }
+
