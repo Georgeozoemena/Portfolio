@@ -890,7 +890,7 @@ em {
 /* Extra Small Screens */
 @media (min-width: 0px) and (max-width: 480px) {
   button {
-    padding: 6px 24px;
+    padding: 8px 24px;
   }
   .hero {
     padding: 15px 4px 55px;
