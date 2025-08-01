@@ -41,7 +41,7 @@ export default function Footer() {
                         <img src={LogoWhite} alt="" />
                     </div>
                     <li>
-                        <Link to={""}>
+                        <Link to={"email/"}>
                             georgeozoemena17@gmail.com
                         </Link>
                     </li>
