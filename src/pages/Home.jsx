@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import Button, { DownloadButton } from '../components/Button'
 import '../assets/styles/global.css'
 import About from './AboutMe'
@@ -8,7 +9,7 @@ import Projects from './Projects/Projects'
 import Card from '../components/Card'
 import Footer from './Footer'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Home(){
     const landingRef = useRef(null)
@@ -16,73 +17,83 @@ export default function Home(){
     const heroBtnsRef = useRef(null)
     const skillSetRef = useRef(null)
     const getInTouchRef = useRef(null)
+    const smoothWrapperRef = useRef(null)
+    const smoothContentRef = useRef(null)
 
     useEffect(() => {
-        // Initial landing animation
-        gsap.fromTo(
+        // Initialize smooth scrolling with optimized settings
+        ScrollSmoother.create({
+            wrapper: smoothWrapperRef.current,
+            content: smoothContentRef.current,
+            smooth: 1, // Reduced smoothness for better performance
+            effects: false, // Disable effects for better performance
+            smoothTouch: false, // Disable on touch devices for native smooth scroll
+            normalizeScroll: true, // Better cross-browser consistency
+            ignoreMobileResize: true, // Better mobile performance
+            preventDefault: true
+        });
+
+        // Optimized initial animations with better performance
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power2.out",
+                duration: 0.6
+            }
+        });
+
+        tl.fromTo(
             landingRef.current,
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+            }
+        ).fromTo(
+            heroTextRef.current.children,
             { opacity: 0, y: 30 },
             {
                 opacity: 1,
                 y: 0,
-                duration: 1,
-                ease: "power2.out"
-            }
-        )
-
-        // Hero section staggered animation
-        const heroText = heroTextRef.current.children
-        gsap.fromTo(
-            heroText,
-            { opacity: 0, y: 50 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out",
-                delay: 0.5
-            }
-        )
-
-        // Hero buttons animation
-        gsap.fromTo(
+                stagger: 0.1
+            },
+            "-=0.3"
+        ).fromTo(
             heroBtnsRef.current.children,
             { opacity: 0, y: 20 },
             {
                 opacity: 1,
                 y: 0,
-                duration: 0.8,
-                stagger: 0.15,
-                ease: "back.out(1.7)",
-                delay: 1.2
-            }
+                stagger: 0.1,
+                ease: "back.out(1.5)"
+            },
+            "-=0.2"
         )
 
-        // Skill set section animation
+        // Optimized skill set section animation
         gsap.fromTo(
             skillSetRef.current,
-            { opacity: 0, y: 50 },
+            { opacity: 0, y: 20 },
             {
                 opacity: 1,
                 y: 0,
-                duration: 1,
+                duration: 0.6,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: skillSetRef.current,
-                    start: "top 75%",
-                    toggleActions: "play none none reverse"
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                    markers: false,
+                    once: true // Animation plays only once
                 }
             }
         )
 
-        // Get in touch section animation
+        // Optimized get in touch section animation
         gsap.fromTo(
             getInTouchRef.current,
             { 
                 opacity: 0,
-                scale: 0.95,
-                y: 30
+                y: 20
             },
             {
                 opacity: 1,
@@ -102,8 +113,10 @@ export default function Home(){
 
     return (
         <>
-            <div ref={landingRef} className="landing">
-                <div className="hero">
+            <div ref={smoothWrapperRef} id="smooth-wrapper">
+                <div ref={smoothContentRef} id="smooth-content">
+                    <div ref={landingRef} className="landing">
+                        <div className="hero">
                     <div ref={heroTextRef} className="hero-text">
                         <h1>Turning Ideas into <em>Interfaces</em>, and Brands into <em>Experiences</em></h1>
                         <h3>Fullstack Developer, UI/UX Designer, Brand Identity Specialist</h3>
@@ -135,6 +148,8 @@ export default function Home(){
                         </div>
                     </div>
                     <Footer />
+                </div>
+            </div>
                 </div>
             </div>
         </>

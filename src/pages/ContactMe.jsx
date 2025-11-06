@@ -23,11 +23,11 @@ export default function Contact(){
 ]
     const Socials = [{
         img: Twitter,
-        link: "https://twitter.com/_GeorgeTweet"
+        link: "https://x.com/detechbishop"
     },
     {
         img: Instagram,
-        link: "https://instagram.com/_georgee01"
+        link: "https://instagram.com/detechbishop"
     },
     {
         img: Github,

@@ -41,18 +41,26 @@ export default function Footer() {
                         <img src={LogoWhite} alt="" />
                     </div>
                     <li>
-                        <Link to={"email/"}>
+                        <a href="mailto:georgeozoemena17@gmail.com">
                             georgeozoemena17@gmail.com
-                        </Link>
+                        </a>
                     </li>
                     <div className="socials">
-                        {socials.map((social)=>{
-                            return <div className="social">
-                                <Link to={""}>
-                                    <img src={social} alt="" />
-                                </Link>
-                            </div>
-                        })}
+                        <div className="social">
+                            <a href="https://x.com/detechbishop" target="_blank" rel="noopener noreferrer">
+                                <img src={Twitter} alt="X (Twitter)" />
+                            </a>
+                        </div>
+                        <div className="social">
+                            <a href="https://github.com/Georgeozoemena" target="_blank" rel="noopener noreferrer">
+                                <img src={Github} alt="GitHub" />
+                            </a>
+                        </div>
+                        <div className="social">
+                            <a href="https://instagram.com/detechbishop" target="_blank" rel="noopener noreferrer">
+                                <img src={Instagram} alt="Instagram" />
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <div className="links">
