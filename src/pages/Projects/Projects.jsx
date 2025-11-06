@@ -14,6 +14,13 @@ export default function Projects(){
     const projectRefs = useRef([]);
     const projects = [
         {
+            name: "Discord Alert Bot",
+            img: Propfit,
+            description: "Propfit is a modern rental and apartment management app designed to simplify property listing, tenant communication, rent tracking, and maintenance requests.",
+            stack: ["ExpressJS", "Node.js", "Sanity CMS"],
+            link: "https://propfit.vercel.app",
+        },
+        {
             name: "Propfit",
             img: Propfit,
             description: "Propfit is a modern rental and apartment management app designed to simplify property listing, tenant communication, rent tracking, and maintenance requests.",
